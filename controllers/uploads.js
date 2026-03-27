@@ -3,7 +3,7 @@ const {response,request}= require('express')
 
 const uploadImage=(req=request,res=response)=>{
 
-  const name=String(req.body.name.split('uploads/')[1]) 
+  const name=String(req.body.name?.split('uploads/')[1]) 
   const company=String(req.body.company) 
   const directoryPath = __dirname.split('controllers')[0]+'uploads/'+name ;
   
