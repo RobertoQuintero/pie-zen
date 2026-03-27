@@ -6,8 +6,7 @@ const path=require('path')
 const storage=multer.diskStorage({
   destination:'uploads',
   filename:async(req,file,cb)=>{
-   console.log()
-    cb(null,file.originalname+`.${file.mimetype.split('/')[1]}`)
+    cb(null,file.originalname.split('.')[0]+`.${file.mimetype.split('/')[1]}`)
   }
 })
 
