@@ -23,7 +23,7 @@ const uploadImage=(req=request,res=response)=>{
   try {
     return res.json({
       ok:true,
-      data:`${process.env.BASE_URL}:${process.env.PORT}/uploads/${req.file.filename}`
+      data:`${process.env.BASE_URL}/uploads/${req.file.filename}`
     })
   } catch (error) {
     console.log({error})
